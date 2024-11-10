@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Travel Website</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">Travel.</a>
+        <div class="toggle" onclick="toggleMenu();"></div>
+        <ul class="menu">
+            <li><a href="#main" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#food" onclick="toggleMenu();">Food</a></li>
+            <li><a href="#destination" onclick="toggleMenu();">Destination</a></li>
+            <li><a href="#contact-box" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Main Home Text And Subscribe Box -->
+    <section id="main">
+        <div class="main-content">
+            <h1>Explore, travel,love.</h1>
+            <p>Be inspired by a place and book your stop online.<br>
+                Add itineraries and guided tours for a unique journey.</p>
+                <label>
+                    <input type="text" placeholder="Enter Your Email...">
+                    <button>Subscribe</button>
+                </label>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-text">
+            <span>About Us</span>
+            <h1>Plan Your Vacation On One Click</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui repudiandae facilis rerum laborum obcaecati iste natus cumque error architecto. Qui ducimus, repellat animi eius inventore quisquam blanditiis amet, nobis eaque ullam quos exercitationem dolorum consequatur!</p>
+            <button>Learn More</button>
+        </div>
+        <!-- About Image -->
+        <div class="about-image">
+            <img src="images/bg.jpg">
+        </div>
+    </section>
+
+    <!-- Food Section -->
+    <section id="food">
+        <div class="food-heading">
+            <h1>Food</h1>
+            <p>Lorem ipsum dolor sit amet consectetur,<br> adipisicing elit. Ullam, quae!</p>
+
+        </div>
+        <div class="food-content">
+            <img src="images/food1.jpg">
+            <img src="images/food2.jpg">
+            <img src="images/food3.jpg">
+            <img src="images/food4.jpg">
+            <img src="images/food5.jpg">
+            <img src="images/food6.jpg">
+        </div>
+    </section>
+
+
+    <!-- Destination Section -->
+    <section id="destination">
+        <!-- Destination Image -->
+        <div class="destination-image">
+            <img src="images/bg.jpg">
+        </div>
+        <!-- Destination Text -->
+        <div class="destination-text">
+            <span>Destination</span>
+            <h1>Your Destination Vacation On One Click</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui repudiandae facilis rerum laborum obcaecati iste natus cumque error architecto. Qui ducimus, repellat animi eius inventore quisquam blanditiis amet, nobis eaque ullam quos exercitationem dolorum consequatur!</p>
+            <button>Book Now</button>
+        </div>
+        
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact-box">
+        <form>
+            <h3>Message Us</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Write Your Message Here..."></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+
+    <!-- Copyright -->
+    <div class="copright">
+        <p>&#169; CarpoolVenom 2020 Copyright All Right Reserved</p>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Sticky Navbar
+        window.addEventListener('scroll', function(){
+            var nav = document.querySelector('nav');
+            nav.classList.toggle('sticky', window.scrollY > 0);
+        });
+
+        // Responsive Navbar
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var menu = document.querySelector('.menu');
+            menuToggle.classList.toggle('active')
+            menu.classList.toggle('active')
+        }
+    </script>
+    
+</body>
+</html>
